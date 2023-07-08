@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,8 +40,30 @@ namespace LinkedList
             {
                 Node temp = head;
                 head = temp.next;
-                Console.WriteLine("First element i s removed successfully ");
+                Console.WriteLine("First element is removed successfully ");
             }
+        }
+
+        public void RemoveLastElement()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            if(head.next==null) 
+            {
+                Console.WriteLine("The next element of head is null");
+            }
+            else
+            {
+                Node temp=head;
+                while(temp.next.next!=null)
+                {
+                    temp=temp.next;//making previous element is first element
+                }
+                temp.next = null;
+            }
+            Console.WriteLine("Last element is deleted successfully");
         }
         public void Display()
         {

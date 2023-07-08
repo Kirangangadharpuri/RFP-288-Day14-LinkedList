@@ -14,6 +14,7 @@ namespace LinkedList
             {
                 Console.WriteLine("1-Insert data in linked list");
                 Console.WriteLine("2-Remove first element");
+                Console.WriteLine("3- Remove last element");
                 Console.WriteLine("choose any above option");
                 int option=Convert.ToInt32(Console.ReadLine());
                 LinkedListDemo linkesListDemo = new LinkedListDemo();
@@ -34,7 +35,14 @@ namespace LinkedList
                         linkesListDemo.InsertData(70);
                         linkesListDemo.RemoveFirstElement();
                         linkesListDemo.Display();
-
+                        break;
+                    case 3:
+                        Console.WriteLine("##### remove last element######");
+                        linkesListDemo.InsertData(56);
+                        linkesListDemo.InsertData(30);
+                        linkesListDemo.InsertData(70);
+                        linkesListDemo.RemoveLastElement();
+                        linkesListDemo.Display();
                         break;
                     default:
                         Console.WriteLine("Invalide option");
