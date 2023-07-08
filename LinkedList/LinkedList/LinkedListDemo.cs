@@ -24,9 +24,22 @@ namespace LinkedList
                 {
                     temp=temp.next;
                 }
-                temp.next=temp;
+                temp.next=node;
             }
             Console.WriteLine("{0} inserted in linked list",data);
+        }
+        public void Display()
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
         }
 
     }

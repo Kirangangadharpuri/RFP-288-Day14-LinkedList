@@ -19,12 +19,12 @@ namespace LinkedList
                 switch(option)
                 {
                     case 1:
-                        Console.WriteLine("######## data in simple Linked list #######");
+                        Console.WriteLine("######## data in Linked list #######");
                         LinkedListDemo linkesListDemo = new LinkedListDemo();
                         linkesListDemo.InsertData(56);
                         linkesListDemo.InsertData(30);
                         linkesListDemo.InsertData(70);
-
+                        linkesListDemo.Display();
                         break;
                     default:
                         Console.WriteLine("Invalide option");
