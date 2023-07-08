@@ -58,7 +58,9 @@ namespace LinkedList
                         linkesListDemo.SearchElement(56);
                         linkesListDemo.Display();
                         break;
-                   
+                    case 6:
+                        linkesListDemo.Size();                        
+                        break;
                     default:
                         Console.WriteLine("Invalide option");
                         break;
