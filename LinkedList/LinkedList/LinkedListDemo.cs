@@ -9,16 +9,24 @@ namespace LinkedList
 {
     public class LinkedListDemo
     {
-       public void Add()
+        public Node head;
+        public void InsertData(int data)
         {
-            LinkedList<int> linkedList= new LinkedList<int>();
-            linkedList.AddFirst(70);
-            linkedList.AddFirst(30);
-            linkedList.AddFirst(56);
-            foreach(int elements in linkedList)
+            Node node = new Node(data);
+            if (head==null)
             {
-                Console.WriteLine(elements);
+                head = node;
             }
+            else
+            {
+                Node temp = head;
+                while(temp.next!=null)
+                {
+                    temp=temp.next;
+                }
+                temp.next=temp;
+            }
+            Console.WriteLine("{0} inserted in linked list",data);
         }
 
     }

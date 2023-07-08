@@ -12,7 +12,7 @@ namespace LinkedList
         {
             while (true)
             {
-                Console.WriteLine("1-Add data in simple linked list");
+                Console.WriteLine("1-Insert data in linked list");
 
                 Console.WriteLine("choose any above option");
                 int option=Convert.ToInt32(Console.ReadLine());
@@ -21,7 +21,10 @@ namespace LinkedList
                     case 1:
                         Console.WriteLine("######## data in simple Linked list #######");
                         LinkedListDemo linkesListDemo = new LinkedListDemo();
-                        linkesListDemo.Add();
+                        linkesListDemo.InsertData(56);
+                        linkesListDemo.InsertData(30);
+                        linkesListDemo.InsertData(70);
+
                         break;
                     default:
                         Console.WriteLine("Invalide option");
