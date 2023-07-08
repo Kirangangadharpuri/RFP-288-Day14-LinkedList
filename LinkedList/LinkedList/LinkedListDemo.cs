@@ -29,20 +29,6 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted in linked list",data);
         }
-       
-        public void RemoveFirstElement()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("Linked List is empty");
-            }
-            else
-            {
-                Node temp = head;
-                head = temp.next;
-                Console.WriteLine("First element is removed successfully ");
-            }
-        }
 
         public void InsertAtPerticularPosition(int position, int data)
         {
@@ -67,6 +53,21 @@ namespace LinkedList
             n.next = prev.next;
             prev.next = n;
         }
+        public void RemoveFirstElement()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            else
+            {
+                Node temp = head;
+                head = temp.next;
+                Console.WriteLine("First element is removed successfully ");
+            }
+        }
+
+       
 
         public void RemoveLastElement()
         {
@@ -109,6 +110,28 @@ namespace LinkedList
             }
             //return count;
         }
+
+        public int SearchElement(int value)
+        {
+            Node node = head;
+            if(node==null) 
+            {
+                return -1;
+            }
+            int count = 0;
+            while(node!=null)
+            {
+                if(node.data==value)
+                {
+                    Console.WriteLine();
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
+
         public void Display()
         {
             Node temp = head;

@@ -55,10 +55,10 @@ namespace LinkedList
                         break;
                     case 5:
                         Console.WriteLine("###### Search Eleement######");
-                        linkesListDemo.Search_Element(56);
+                        linkesListDemo.SearchElement(56);
                         linkesListDemo.Display();
-
                         break;
+                   
                     default:
                         Console.WriteLine("Invalide option");
                         break;
