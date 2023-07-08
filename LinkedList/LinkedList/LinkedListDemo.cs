@@ -44,6 +44,30 @@ namespace LinkedList
             }
         }
 
+        public void InsertAtPerticularPosition(int position, int data)
+        {
+            Node n = new Node(data);
+            if (this.head == null)
+                this.head = n;
+            if (position == 0)
+            {
+                n.next = head;
+                head = n;
+                return;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            n.next = prev.next;
+            prev.next = n;
+        }
+
         public void RemoveLastElement()
         {
             if(head == null)
@@ -64,6 +88,26 @@ namespace LinkedList
                 temp.next = null;
             }
             Console.WriteLine("Last element is deleted successfully");
+        }
+        public void Search_Element(int value)
+        {
+            Node node = head;
+            if(head==null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            int count = 0;
+            while(node!=null)
+            {
+                if(node.data==value)
+                {
+                    Console.WriteLine();
+                    //return count;
+                }
+                node = node.next;
+                count++;
+            }
+            //return count;
         }
         public void Display()
         {
