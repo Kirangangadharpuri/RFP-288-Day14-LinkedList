@@ -28,6 +28,20 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted in linked list",data);
         }
+       
+        public void RemoveFirstElement()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+            }
+            else
+            {
+                Node temp = head;
+                head = temp.next;
+                Console.WriteLine("First element i s removed successfully ");
+            }
+        }
         public void Display()
         {
             Node temp = head;
