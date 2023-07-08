@@ -25,6 +25,9 @@ namespace LinkedList
                         linkesList.Insert(23);
                         linkesList.Insert(66);
                         linkesList.Insert(94);
+                        Console.WriteLine("########################");
+                        Console.WriteLine("Elements in linked list are :");
+                        linkesList.Display();
                         break;
                     default:
                         Console.WriteLine("Invalide option");
